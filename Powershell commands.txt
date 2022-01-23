@@ -1,14 +1,17 @@
 get-process -Name notepad
 get-process -Name notepad | Stop-Process
+
+PS where object:
 Get-Process | Where-Object -FilterScript{$_.cpu –gt 20}
 get-service bits,winrm |  where-object {$_.status -eq 'stopped'} | start-service
 
+PS For each object:
 Get-WMIObject Win32_LogicalDisk | ForEach-Object {$_.FreeSpace}
 Get-WMIObject Win32_LogicalDisk | ForEach-Object {$_.FreeSpace/1024/1024/1024}
 
-
+PS select object:
 Get-Process | Select-Object -Property ProcessName, Id, Cpu
 Get-Process -Name chrome | Select-Object -Property *
 
-
+PS Sort object:
 Get-Process | Sort-Object -Property ProcessName
