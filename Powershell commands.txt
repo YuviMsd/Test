@@ -15,3 +15,6 @@ Get-Process -Name chrome | Select-Object -Property *
 
 PS Sort object:
 Get-Process | Sort-Object -Property ProcessName
+
+added one line
+
